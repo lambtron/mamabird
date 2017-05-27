@@ -17,6 +17,58 @@
   <!-- <meta property="og:image" content="http://andreessenhoroscopes.com/public/img/meta.gif" /> -->
   <!-- <meta name="twitter:image" content="http://andreessenhoroscopes.com/public/img/meta.gif" /> -->
   <link rel="shortcut icon" href="./img/mamabird-favicon.ico" />
+  <style>
+    .introduction img {
+      width: 50%;
+    }
+    
+    .nutrition img {
+      width: 35%;
+      border-radius: 50px;
+    }
+    
+    .nutrition {
+      text-align: center;
+    }
+    
+    .nutrition .fiber,
+    .nutrition .percentage {
+      display: inline-block;
+    }
+
+    .testimonials {
+      position: relative;
+    }
+
+    .testimonials .slick-prev,
+    .testimonials .slick-next {
+      position: absolute;
+      z-index: 9999;
+      top: 20%;
+      width: 38px;
+      height: 55px;
+      background-size: cover;
+      cursor: pointer;
+      opacity: .6;
+    }
+
+    .testimonials .slick-prev {
+      left: 32%;
+    } 
+
+    .testimonials .slick-next {
+      right: 32%;
+    }
+
+    .testimonials .slick-prev { 
+      background-image: url("./img/leftarrow.png");
+    }
+
+    .testimonials .slick-next { 
+      background-image: url("./img/rightarrow.png");
+    }
+
+  </style>
 </head>
 <body class="sans-serif">
   <header>
@@ -42,32 +94,63 @@
       </div>
     </div>
   </header>
-  <div class="ph3 ph5-m pv5 ph7-l db">
-    <div class="f1 lh-title">
-      Eating takes time.
+  <section class="mw9 center introduction">
+    <div class="cf ph2-ns center bg-moon-gray">
+      <div class="fl w-75 pa2">
+        <div class="f1 lh-title">
+          Eating takes time.
+        </div>
+        <p class="f4 lh-copy measure">
+          Over 20% of our lives are spent choosing what to eat, preparing food, eating, and digesting. Our simple menu of delicious and pre-selected meals makes eating fast and easy.
+        </p>
+      </div>
+      <div class="fr w-25 pa2 img">
+        <img src="./img/dumpster.png" />
+      </div>
+      <div class="fl w-75 pa2">
+        <div class="f1 lh-title ">
+          Streamlined nutrition.
+        </div>
+        <p class="f4 lh-copy measure">
+          You are what you eat, so why not be at your 100% all the time? Say goodbye to food comas and digestive issues. Our meticulously designed meals are optimized for consumption and performance.
+        </p>
+      </div>
+      <div class="fr w-25 pa2">
+        <img src="./img/satisfaction.png" />
+      </div>
+      <div class="fl w-75 pa2">
+        <div class="f1 lh-title">
+          No address? No problem.
+        </div>
+        <p class="f4 lh-copy measure">
+          Just drop a pin, because our flock of qualified and fully vetted Mama Bird's&#8482; can meet you anywhere. Our amazing coverage also ensures that your meals arrive hot and ready within minutes.
+        </p>
+      </div>
+      <div class="fr w-25 pa2">
+        <img src="./img/lost.png" />
+      </div>
     </div>
-    <p class="f4 lh-copy measure">
-      Over 20% of our lives are spent choosing what to eat, preparing food, eating, and digesting. Our simple menu of delicious and pre-selected meals makes eating fast and easy.
-    </p>
-  </div>
-  <div class="ph3 pv5 ph5-m ph7-l tr fr db w-100">
-    <div class="f1 lh-title ">
-      Streamlined nutrition.
+  </section>
+  <section class="mw9 center center nutrition">
+    <div class="cf ph2-ns center bg-green">
+      <div class="fl w-100 pa2 center img">
+        <img src="./img/andy-puke.gif" />
+      </div>
+      <div class="fl w-third pa2">
+        <p class="number-counter f1 lh-title">550</p>
+        <p class="f1 lh-title">calories</p>
+      </div>
+      <div class="fl w-third pa2">
+        <p class="number-counter f1 lh-title">80</p>
+        <p class="f1 lh-title">grams of protein</p>
+      </div>
+      <div class="fl w-third pa2">
+        <p class="number-counter f1 lh-title fiber">100</p><p class="percentage">%</p>
+        <p class="f1 lh-title">daily fiber</p>
+      </div>
     </div>
-    <p class="f4 lh-copy measure fr">
-      You are what you eat, so why not be at your 100% all the time? Say goodbye to food comas and digestive issues. Our meticulously designed meals are optimized for consumption and performance.
-    </p>
-  </div>
-  <div class="ph3 pv5 ph5-m ph7-l cf db">
-    <div class="f1 lh-title">
-      No address? No problem.
-    </div>
-    <p class="f4 lh-copy measure">
-      Just drop a pin, because our flock of qualified and fully vetted Mama Bird's&#8482; can meet you anywhere. Our amazing coverage also ensures that your meals arrive hot and ready within minutes.
-    </p>
-  </div>
-
-  <div class=" bg-light-yellow">
+  </section>
+  <div class="bg-light-yellow">
     <div class="pt5 ph3 ph4-m ph5-l">
       <h1 id="how-it-works" class="f3 f2-m f-subheadline-l measure lh-title fw1 mt0 tc">
         How it works
@@ -100,7 +183,7 @@
     </div>
   </div>
 
-  <div class="dt-ns dt--fixed-ns pv4 ph5-l bg-light-gray">
+  <div class="dt-ns dt--fixed-ns pv4 ph5-l bg-light-gray testimonials">
     <div class="dtc-ns tc pv4">
       <img
             src="http://tachyons.io/img/logo.jpg"
@@ -206,5 +289,33 @@
       </svg>
     </a>
   </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+          <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+  <!-- Waypoints is used for firing events on scroll -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+  <!-- Counter up is a simple library for making numbers appear to dynamically ascend -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+  <!-- Twentytwenty is used for image comparison -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mhayes-twentytwenty/1.0.0/js/jquery.event.move.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mhayes-twentytwenty/1.0.0/js/jquery.twentytwenty.min.js"></script>
+  <!-- Slick is a simple image carousel library that's highly customizable -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
+  <script>
+    $(".number-counter").counterUp({
+      delay: 2,
+      time: 700
+    });
+
+    // Options for the testimonial carousel. I made custom arrows, enabled autoplay, and have 3 testimonials appear at the same time
+    $(".testimonials").slick({
+      centerMode: true,
+      centerPadding: "9px",
+      slidesToShow: 1,
+      prevArrow: "<span class='a-left control-c prev slick-prev'></span>",
+      nextArrow: "<span class='a-right control-c next slick-next'></span>",
+      autoplay: true,
+      autoplaySpeed: 2000
+    });
+  </script>
 </body>
 </html>
